@@ -1,3 +1,11 @@
+nav {
+    transition: .55s;
+    -webkit-transition: .55s;
+    -moz-transition: .55s;
+    -ms-transition: .55s;
+    -o-transition: .55s;
+}
+
 .nav-link {
     position: relative;
 }
@@ -10,7 +18,7 @@
     width: 0;
     bottom: 0;
     height: 3px;
-    background: red;
+    background: rgb(37, 37, 255);
     transition: .5s;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -33,4 +41,8 @@
     -moz-transition: .10s;
     -ms-transition: .10s;
     -o-transition: .10s;
+}
+
+.d-flex {
+    width: 50px;
 }

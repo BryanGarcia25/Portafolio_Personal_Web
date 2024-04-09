@@ -16,29 +16,6 @@ export const routes: Routes = [
         path: 'skills',
         title: 'Habilidades',
         loadComponent: () => import('./components/skills/skills.component'),
-        children: [
-            {
-                path: 'frontend',
-                loadComponent: () => import('./components/skills/frontend/frontend.component')
-            },
-            {
-                path: 'backend',
-                loadComponent: () => import('./components/skills/backend/backend.component')
-            },
-            {
-                path: 'databases',
-                loadComponent: () => import('./components/skills/databases/databases.component')
-            },
-            {
-                path: 'tools',
-                loadComponent: () => import('./components/skills/tools/tools.component')
-            },
-            {
-                path: '',
-                redirectTo: 'frontend',
-                pathMatch: 'full'
-            },
-        ]
     },
     {
         path: 'projects',
