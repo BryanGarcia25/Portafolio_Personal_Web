@@ -1,0 +1,30 @@
+.container {
+    margin-top: 85px;
+}
+
+.container > p {
+    font-size: 20px;
+}
+
+.container > .text-uppercase {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.w-100 > input, .m-1 > input, .m-1 > textarea {
+    transition: .55s;
+    -webkit-transition: .55s;
+    -moz-transition: .55s;
+    -ms-transition: .55s;
+    -o-transition: .55s;
+}
+
+@media (min-width: 0px) and (max-width: 400px) {
+    .container > p {
+        font-size: 14px;
+    }
+
+    .container > .text-uppercase {
+        font-size: 30px;
+    }
+}
