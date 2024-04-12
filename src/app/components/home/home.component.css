@@ -5,3 +5,8 @@
 .name {
     font-size: 80px;
 }
+
+section > .container > h1 {
+    font-weight: 900;
+    font-style: normal;
+}
