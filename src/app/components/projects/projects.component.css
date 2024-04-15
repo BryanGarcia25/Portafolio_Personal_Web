@@ -1,0 +1,11 @@
+.vh-100 {
+    padding: 100px 0;
+}
+
+.card {
+    transition: .55s;
+    -webkit-transition: .55s;
+    -moz-transition: .55s;
+    -ms-transition: .55s;
+    -o-transition: .55s;
+}

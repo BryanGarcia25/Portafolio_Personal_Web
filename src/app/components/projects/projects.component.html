@@ -1,1 +1,17 @@
-<p>projects works!</p>
+<section class="min-vh-100 text-center">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row justify-content-center align-items-center vh-100">
+                @for (item of projectList; track $index) {
+                    <!-- Código para mostrar los proyectos realizados de la lista projectList -->
+                } @empty {
+                    <div class="col-sm-12">
+                        <div class="text-center text-secondary">
+                            <h1>De momento, no hay proyectos por mostrar en esta sección</h1>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
