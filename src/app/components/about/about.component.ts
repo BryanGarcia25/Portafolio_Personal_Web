@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faBriefcase, faDrawPolygon, faDumbbell, faFilm, faGamepad, faGraduationCap, faMusic, faPen, faWalking } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about',
@@ -10,6 +10,13 @@ import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
   styleUrl: './about.component.css'
 })
 export default class AboutComponent {
-  public iconAcademic = faGraduationCap;
   public iconJob = faBriefcase;
+  public iconVideogame = faGamepad;
+  public iconDraw = faPen;
+  public iconMusic = faMusic;
+  public iconMovies = faFilm;
+  public iconExercise = faDumbbell;
+  public iconWalk = faWalking;
+
+  public iconArrow = faArrowAltCircleRight;
 }

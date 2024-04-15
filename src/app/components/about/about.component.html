@@ -1,23 +1,76 @@
-<section class="vh-100 d-flex align-items-center py-1 justify-content-center">
-    <div class="w-75">
-        <h1 class="text-primary text-uppercase fw-bold my-4 about">¿Quien soy?</h1>
-        <div class="my-5">
-            <p class="fst-italic fs-4">Ingeniero en Sistemas Computacionales, enfocado en la rama de la programación donde me entusiasma en dar vida a nuevas aplicaciones mediante código, siendo mi motivación el aprender habilidades y técnicas que me enriquecen profesionalmente.</p>
-            <p class="fst-italic fs-4">Graduado del Tecnologico Nacional de México Campus Ciudad Constitución en el estado de Baja California Sur, estoy en busca de nuevos retos que me permitan demostrar y aplicar mis conocimientos en el área de desarrollo, con el propósito de seguir creciendo continuamente en el ámbito profesional y personal.</p>
+<section class="min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="container p-4">
+        <h1 class="text-primary text-uppercase fw-bold">¿Quien soy?</h1>
+        <div class="my-4">
+            <p class="fst-italic fs-4">Ingeniero en Sistemas Computacionales, enfocado en la rama de la programación donde me entusiasma en dar vida a nuevas aplicaciones, siendo mi motivación el aprender habilidades y técnicas que me enriquezcan profesionalmente.</p>
+            <p class="fst-italic fs-4">Siendo una persona con mucho entusiasmo, responsable y proactivo, estoy en busca de nuevos retos que permitan superarme continuamente para demostrar y aplicar mis conocimientos adqueridos a lo largo de mi trayectoria profesional en el mundo del desarrollo de software.</p>
         </div>
     </div>
 </section>
 
-<section class="vh-100 d-flex align-items-center justify-content-center">
-    <div class="d-flex justify-content-center align-items-center w-75">
-        <fa-icon [icon]="iconJob" class="icon mx-5 mh-100 fs-2"></fa-icon>
-        <div class="px-4">
-            <h1 class="text-primary text-uppercase fw-bold my-4">Mi Experiencia Laboral</h1>
-            <p class="fst-italic fs-4">Estudie en el Tecnologico Nacional de México Campus Ciudad Constitución en el estado de Baja California Sur.</p>
+<section class="min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <h1 class="text-primary text-uppercase fw-bold mb-4">Mi experiencia laboral</h1>
+        <div class="container p-4 border border-primary rounded-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="text-uppercase fw-bold"> <fa-icon [icon]="iconJob" class="me-3"></fa-icon>Capgemini</h1>
+                <h5 class="bg-primary px-4 py-3 rounded-5 fw-bold">Septiembre 2022 - Febrero 2024</h5>
+            </div>
+            <hr>
+            <h2 class="my-4">Fullstack Developer</h2>
+            <p class="fs-5">Durante mi instancia en Capgemini colabore en equipo para el desarrollo de un proyecto hacia un cliente, teniendo participación en las siguientes actividades:</p>
+            <ul class="fst-italic">
+                <li>
+                    <p>Trabajé en equipo bajo la metodología SCRUM.</p>
+                </li>
+                <li>
+                    <p>Colaboré en la refactorización de código front-end con Angular 14.</p>
+                </li>
+                <li>
+                    <p>Apoyé en el proceso de CICD a través de herramientas como Jenkins y Bitbucket.</p>
+                </li>
+                <li>
+                    <p>Desarrollé pruebas unitarias con Mockito y Java.</p>
+                </li>
+                <li>
+                    <p>Documenté las acciones realizadas de mis actividades mediante herramientas como Jira y Confluence.</p>
+                </li>
+                <li>
+                    <p>Implementé PL/SQL para la generación de scripts de base de datos.</p>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
 
-<section class="vh-100 d-flex align-items-center justify-content-center">
-    <h1 class="text-primary text-uppercase hobbies fw-bold">Mis hobbies favoritos</h1>
+<section class="min-vh-100 d-flex flex-column align-items-center justify-content-center">
+    <h1 class="text-primary text-uppercase fw-bold fs-1 mb-3">Mis hobbies favoritos</h1>
+    <div class="container text-center">
+        <div class="row w-100 justify-content-center">
+            <div class="col-xl-4 shadow p-3 mb-5">
+                <fa-icon [icon]="iconVideogame"></fa-icon>
+                <p class="fs-4 text-uppercase fw-bold">Videojuegos</p>
+            </div>
+            <div class="col-xl-4 shadow p-3 mb-5">
+                <fa-icon [icon]="iconDraw"></fa-icon>
+                <p class="fs-4 text-uppercase fw-bold">Dibujar</p>
+            </div>
+            <div class="col-xl-4 shadow p-3 mb-5">
+                <fa-icon [icon]="iconMusic"></fa-icon>
+                <p class="fs-4 text-uppercase fw-bold">Música</p>
+            </div>
+            <div class="col-xl-4 shadow p-3 mb-5">
+                <fa-icon [icon]="iconMovies"></fa-icon>
+                <p class="fs-4 text-uppercase fw-bold">Películas</p>
+            </div>
+            <div class="col-xl-4 shadow p-3 mb-5">
+                <fa-icon [icon]="iconExercise"></fa-icon>
+                <p class="fs-4 text-uppercase fw-bold">Ejercicio</p>
+            </div>
+            <div class="col-xl-4 shadow p-3 mb-5">
+                <fa-icon [icon]="iconWalk"></fa-icon>
+                <p class="fs-4 text-uppercase fw-bold">Caminar</p>
+            </div>
+        </div>
+    </div>
 </section>

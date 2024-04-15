@@ -1,0 +1,11 @@
+.container > h1 {
+    font-size: 60px;
+}
+
+.d-flex > .icon {
+    font-size: 100px;
+}
+
+.col-xl-4 > fa-icon {
+    font-size: 80px;
+}
