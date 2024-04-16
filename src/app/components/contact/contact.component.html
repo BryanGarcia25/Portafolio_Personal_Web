@@ -1,29 +1,38 @@
 <section class="vh-100 d-flex flex-column justify-content-center align-items-center">
     <div class="container text-center border border-primary rounded-4 p-4 w-50">
+        @if (sendEmailSuccess == true) {
+            <div class="bg-success text-center p-2 mb-3">
+                <h5>¡Tu mensaje ha sido enviado correctamente!</h5>
+            </div>
+        } @else if (sendEmailSuccess == false) {
+            <div class="bg-danger text-center p-2 mb-3">
+                <h5>Haz olvidado llenar todos los campos, favor de completarlos</h5>
+            </div>
+        }
         <h1 class="text-uppercase">Contactame</h1>
         <p>¿Tienes alguna idea en mente y te gustaría hacerlo realidad? Escribeme a través del siguiente formulario y con gusto estaré revisando tu mensaje a la brevedad.</p>
-        <form action="" class="text-start">
+        <form action="" class="text-start" [formGroup]="formContact" method="post" (submit)="sendEmail()">
             <div class="d-flex justify-content-center">
                 <div class="m-1 m-sm-1 w-100">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre" formControlName="name">
                 </div>
                 <div class="m-1 m-sm-1 w-100">
                     <label for="apellido" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="apellidos">
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="apellidos" formControlName="last_name">
                 </div>
             </div>
             <div class="m-1">
                 <label for="Correo" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="Correo" name="Correo" placeholder="example@example.com">
+                <input type="email" class="form-control" id="Correo" name="Correo" placeholder="example@example.com" formControlName="from_email">
             </div>
             <div class="m-1">
                 <label for="description" class="form-label">Descripción</label>
-                <textarea name="description" id="description" class="form-control" cols="10" rows="2"></textarea>
+                <textarea name="description" id="description" class="form-control" cols="10" rows="2" formControlName="message"></textarea>
             </div>
             <div class="mt-4 text-center">
                 <button class="btn btn-primary px-5 text-uppercase" type="submit">enviar</button>
-            </div>                    
+            </div>
         </form>
     </div>
 </section>
