@@ -1,5 +1,6 @@
 .container {
     margin-top: 85px;
+    width: 50%;
 }
 
 .container > p {
@@ -19,12 +20,28 @@
     -o-transition: .55s;
 }
 
-@media (min-width: 0px) and (max-width: 400px) {
+@media screen and (max-width: 767px) {
+    .container {
+        margin-top: 35px;
+        width: 100%;
+    }
+
+    .container > .text-uppercase {
+        font-size: 35px;
+    }
+
     .container > p {
         font-size: 14px;
     }
 
-    .container > .text-uppercase {
-        font-size: 30px;
+    .w-100 > input, .m-1 > input, .m-1 > label, .m-1 > textarea {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        margin-top: 85px;
+        width: 75%;
     }
 }

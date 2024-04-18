@@ -1,21 +1,19 @@
-.px-4 {
-    transition: .35s;
-    -webkit-transition: .35s;
-    -moz-transition: .35s;
-    -ms-transition: .35s;
-    -o-transition: .35s;
-}
-
-.px-4:hover {
-    color: green;
-    background: #0088ff;
-    transition: .35s;
-    -webkit-transition: .35s;
-    -moz-transition: .35s;
-    -ms-transition: .35s;
-    -o-transition: .35s;
-}
-
 .vh-100 {
     padding: 100px 0;
+}
+
+.col-lg-2 > h1 {
+    font-size: 26px;
+}
+
+@media screen and (max-width: 767px) {
+
+    img.mw-100 {
+        height: 80px;
+    }
+    
+    .col-lg-2 > h1 {
+        font-size: 16px;
+    }
+
 }

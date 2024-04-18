@@ -1,12 +1,35 @@
 .container {
-    margin-top: 225px;
-}
-
-.name {
-    font-size: 80px;
+    margin-top: 30.8vh;
 }
 
 section > .container > h1 {
+    font-size: 80px;
     font-weight: 900;
     font-style: normal;
+}
+
+@media screen and (max-width: 767px) {
+
+    section > .container > h1 {
+        font-size: 40px;
+    }
+
+    section > .container > h3 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    section > .container > h1 {
+        font-size: 65px;
+    }
+
+    section > .container > h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
 }

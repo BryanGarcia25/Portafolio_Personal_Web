@@ -2,10 +2,73 @@
     font-size: 60px;
 }
 
+.container > .my-4 > p {
+    font-size: 24px;
+}
+
 .d-flex > .icon {
     font-size: 100px;
 }
 
-.col-xl-4 > fa-icon {
-    font-size: 80px;
+.container > h2 {
+    font-size: 38px;
+}
+
+.container > p {
+    font-size: 21px;
+}
+
+.col-lg-4 > fa-icon {
+    font-size: 60px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .container > h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .container > h2 {
+        font-size: 26px;
+    }
+
+    .container > .my-4 > p {
+        font-size: 16px;
+    }
+
+    .d-flex > h1.text-primary {
+        font-size: 22px;
+    }
+
+    .d-flex > h1.text-uppercase {
+        font-size: 20px;
+    }
+
+    .d-flex > h5.bg-primary {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .container > p {
+        font-size: 18px;
+    }
+
+    .min-vh-100.flex-column {
+        margin-top: 100px;
+    }
+
+    .min-vh-100 > h1.text-primary {
+        font-size: 22px;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .container > h1 {
+        font-size: 50px;
+    }
+
 }
