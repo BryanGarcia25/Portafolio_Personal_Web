@@ -13,21 +13,49 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class NavbarComponent {
   public menuNavbar = routes.map(route => route).flat().filter(route => route.path).filter(route => route.title);
-  public icon = faSun;
+  public iconMode = faSun;
+  public pathActive: string = "";
 
-  changeBackgroundColor() {
-    document.body.style.transition = '.55s';
-
-    if (document.body.getAttribute("data-bs-theme") == 'dark') {
-      document.body.setAttribute("data-bs-theme", "light");
-      this.icon = faMoon;
-      document.getElementsByClassName('navbar')[0].classList.remove('bg-dark');
-      document.getElementsByClassName('navbar')[0].classList.toggle('bg-white');
+  constructor () {
+    if (window.location.pathname == '/') {
+      this.pathActive = "home";
     } else {
-      document.body.setAttribute("data-bs-theme", "dark");
-      this.icon = faSun;
-      document.getElementsByClassName('navbar')[0].classList.remove('bg-white');
-      document.getElementsByClassName('navbar')[0].classList.toggle('bg-dark');
+      this.pathActive = window.location.pathname.replace("/", "");
     }
   }
+
+  changeBackgroundColor() {
+    const navbarClass = document.getElementsByClassName('navbar');
+    const body = document.body;
+    body.style.transition = '.55s';
+
+    if (body.getAttribute("data-bs-theme") == 'dark') {
+      this.iconMode = faMoon;
+      body.setAttribute("data-bs-theme", "light");
+      navbarClass[0].classList.remove('bg-dark');
+      navbarClass[0].classList.toggle('bg-white');
+    } else {
+      this.iconMode = faSun;
+      body.setAttribute("data-bs-theme", "dark");
+      navbarClass[0].classList.remove('bg-white');
+      navbarClass[0].classList.toggle('bg-dark');
+    }
+
+  }
+
+  navLinkSelected(nameSection: any) {
+    const navLinksClass = document.getElementsByClassName('nav-link');
+    for (let index = 0; index < navLinksClass.length; index++) {
+
+      if (navLinksClass[index].classList.contains('active')) {
+        navLinksClass[index].classList.remove('active');
+      }
+
+      if (navLinksClass[index].innerHTML == nameSection) {
+        navLinksClass[index].classList.add('active');
+      }
+      
+    }
+  }
+
 }

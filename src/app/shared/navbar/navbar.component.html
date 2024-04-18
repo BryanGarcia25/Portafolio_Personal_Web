@@ -13,12 +13,16 @@
                 <ul class="navbar-nav justify-content-center w-100">
                     @for (link of menuNavbar; track $index) {
                         <li class="nav-item">
-                            <a [routerLink]="link.path" class="nav-link text-uppercase fw-bold mx-3">{{ link.title }}</a>
+                            @if (link.path == pathActive) {
+                                <a [routerLink]="link.path" class="nav-link active text-uppercase fw-bold mx-3" (click)="navLinkSelected(link.title)">{{ link.title }}</a>
+                            } @else {
+                                <a [routerLink]="link.path" class="nav-link text-uppercase fw-bold mx-3" (click)="navLinkSelected(link.title)">{{ link.title }}</a>
+                            }
                         </li>
                     }
                 </ul>
                 <div class="m-3 m-xl-0" (click)="changeBackgroundColor()">
-                    <fa-icon [icon]="icon" class="icon fs-2 my-sm-4"></fa-icon>
+                    <fa-icon [icon]="iconMode" class="icon fs-2 my-sm-4"></fa-icon>
                 </div>
             </div>
         </div>
