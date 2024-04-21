@@ -23,13 +23,9 @@ export default class ContactComponent {
   })
 
   constructor(private formBuilder: FormBuilder) { }
-
-  validateForm(): boolean {
-    return this.sendEmailSuccess = this.formContact.valid == true ? true : false;
-  }
-
+  
   sendEmail() {
-    if (this.validateForm()) {
+    if (this.formContact.valid) {
       emailjs.init(connectionEmailService.PUBLIC_KEY);
       emailjs.send(connectionEmailService.SERVICE_ID, connectionEmailService.TEMPLATE_ID, {
         from_name: this.formContact.value.name + " " + this.formContact.value.last_name,
@@ -38,10 +34,12 @@ export default class ContactComponent {
         subject: "",
         message: this.formContact.value.message,
       }).then((resp) => {
-
+        this.sendEmailSuccess = true;
       }, (err) => {
 
       })
+    } else {
+      this.sendEmailSuccess = false;
     }
   }
 }

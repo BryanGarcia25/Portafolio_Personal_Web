@@ -45,16 +45,14 @@ export class NavbarComponent {
 
   navLinkSelected(nameSection: any) {
     const navLinksClass = document.getElementsByClassName('nav-link');
-    for (let index = 0; index < navLinksClass.length; index++) {
-
-      if (navLinksClass[index].classList.contains('active')) {
-        navLinksClass[index].classList.remove('active');
+    for (let navLink of navLinksClass) {
+      if (navLink.classList.contains('active')) {
+        navLink.classList.remove('active');
       }
 
-      if (navLinksClass[index].innerHTML == nameSection) {
-        navLinksClass[index].classList.add('active');
+      if (navLink.innerHTML == nameSection) {
+        navLink.classList.add('active');
       }
-      
     }
   }
 

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { routes } from '../../app.routes';
 import { Tecnology } from '../../interfaces/tecnology_interface';

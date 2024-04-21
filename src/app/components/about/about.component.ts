@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faArrowAltCircleRight, faBriefcase, faDrawPolygon, faDumbbell, faFilm, faGamepad, faGraduationCap, faMusic, faPen, faWalking } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faBriefcase, faDumbbell, faFilm, faGamepad, faMusic, faPen, faWalking } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about',
