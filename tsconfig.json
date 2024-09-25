@@ -23,7 +23,8 @@
       "ES2022",
       "dom",
       "DOM.Iterable"
-    ]
+    ],
+    "resolveJsonModule": true, // add this line...
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
